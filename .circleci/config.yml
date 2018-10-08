@@ -1,9 +1,11 @@
 version: 2
 jobs:
-  build_mac:
+  build:
     macos:
       xcode: "9.4.1"
     working_directory: /Users/distiller/project
     steps:
       - checkout
-      - run: echo "hello world"
+      - run:
+          working_directory: ~/project/macos
+          command: ./build-cef-mac.sh
