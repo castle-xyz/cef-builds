@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build_mac:
+    macos:
+      xcode: "9.4.1"
+    working_directory: /Users/distiller/project
+    steps:
+      - checkout
+      - run: echo "hello world"
